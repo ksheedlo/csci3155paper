@@ -1,6 +1,6 @@
 # List Comprehensions in ECMAScript 6
 
-- Abstract
+## Abstract
 
 ## Motivation
 
@@ -60,12 +60,12 @@
   - Primarily primary sources from the language's community (likely the ECMAScript draft)
   - Is there a specific citation format we need to follow? MLA? APA? Other?
   - Other Notes
-    - When citing evidence, you should look for authority over form. For this paper, blog posts
-    and their comments, emails in mailing lists, and Q&A in StackOverflow-type sites are valid
-    primary sources, even if informal, along with articles and books. What matters here is the
-    content of the discussion and where it went. Consider carefully the author of the source,
-    and its centrality, in theconversation. In addition, do filter out noise and irrelevance.
-    Careful selection and presentation are important parts of what we will evaluate.
+        - When citing evidence, you should look for authority over form. For this paper, blog posts
+          and their comments, emails in mailing lists, and Q&A in StackOverflow-type sites are valid
+          primary sources, even if informal, along with articles and books. What matters here is the
+          content of the discussion and where it went. Consider carefully the author of the source,
+          and its centrality, in theconversation. In addition, do filter out noise and irrelevance.
+          Careful selection and presentation are important parts of what we will evaluate.
 - Must be written using the GitHub flavor of Markdown
 - Between 1000 and 1500 words
   - Excluding long quotes, code examples, and Markdown overhead
