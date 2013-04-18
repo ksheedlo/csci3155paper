@@ -24,11 +24,28 @@
 
 - ECMAScript Working Draft
     - And edits
-
+- Look for a mailing list
+- TODO: Need more research done here
 
 ## Implementation status
 
+- Mozilla
+    - Currently implemented in Firefox and recent Spidermonkey
+    - Include code samples
+- V8
+    - Look for a current issue (I think one exists)
+    - V8 is somewhat more stable than Mozilla and will be slower to implement
+- Microsoft
+    - Would be interesting to find some information on this from MS
+    - Will it be implemented in IE 11? 12?
+
 ## Implications and future predictions
+- When it will be acceptable to use in production-ready application code?
+    - Make a prediction
+    - What about specialized libraries? (e.g., JQuery and AngularJS can use
+      more advanced features as long as they deal with the possibility of
+      not having them)
+- Feasibility of a library shim for legacy browsers going forward
 
 ## Notes
 - "Need carefully consider the change proposal in terms of documenting its proposed impact to the language and its use"
