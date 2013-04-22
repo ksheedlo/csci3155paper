@@ -4,4 +4,8 @@ PANDOC=pandoc
 all: outline.pdf paper.pdf
 
 %.pdf: %.md
-	pandoc -o $@ $^
+	$(PANDOC) -o $@ $^
+
+.PHONY: clean
+clean:
+	rm *.pdf
