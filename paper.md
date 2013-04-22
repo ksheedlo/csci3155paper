@@ -113,7 +113,21 @@ do not appear to have as open of a development community as does Mozilla and
 Google. Consequently, information regarding their future support for array
 comprehensions is not known.
 
-## Implications and future predictions
+## Implications and Future Predictions
+
+For client-side ECMAScript, array comprehensions are not quite ready for
+production use. This is due to the fact that it is hardly supported in any
+of the available main-stream web browsers. Furtheremore, as V8 does not
+currently implement array comprehensions, it is not feasibly usable in
+server-side production code.
+
+That said, a developer with the desire to use a higher-order operation such
+as array comprehension could feasibly use a higher-level ECMAScript framework
+to accomplish its functionality, as the higher-level framework could take care
+of instances where the specific language feature is not yet available in the
+browser that the code is being executed in. This could also be accomplished
+through the use of a shim, or some ECMAScript-conforming syntax that could
+be overloaded to emulate array comprehensions.
 
 ## Sources
 - https://code.google.com/p/v8/issues/detail?id=890
