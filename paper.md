@@ -30,4 +30,60 @@ of comprehension.
 
 ## History
 
+List comprehensions are inspired by the familiar mathematical *set-builder
+notation*. For instance, if a mathematician wanted to express the set $Y \subset
+X$ such that the predicate $p(y)$ held for each element $y$ in the set $Y$, he
+would write
 
+$\{ y \in X | p(y) \}$
+
+A functional programmer might write this equivalently as `filter p xs`. However,
+greater code clarity can be achieved with syntax that more closely resembles the
+mathematical notation. For instance, in Python this idiom can be expressed as
+
+    [x for x in xs if p(x)]
+
+There is somewhat more typing involved than the traditional filter, but the
+intent is clear. Further, list comprehension syntax scales much more nicely to
+complex expressions than the equivalent map and filter. For instance, if I want
+to map `f` over the Cartesian product of `xs` and `ys`, but only if the
+predicate `p` holds, in Python:
+
+    [f(x, y) for x in xs for y in ys if p(x, y)]
+
+The first recognizable list comprehension syntax appeared in the language SETL
+in the late 1960s, followed by NPL in 1977. The historical precedent for including array
+comprehensions arguably begins with the Miranda language, which was released in
+1985. In Miranda, one can create a list of odd squares less than 10,000 like so:
+
+    [n*n | n <- [1..100]; n*n mod 2 = 1]
+
+Miranda was a strong influence on the developers of Haskell. In Haskell, the
+code to express odd squares less than 10,000 looks like this:
+
+    [n*n | n <- [1..100], n*n `mod` 2 == 1]
+
+The Haskell syntax has remained essentially the same since Haskell was
+originally defined in 1990. Haskell in turn influenced the development of
+Python. List comprehensions were standardized in PEP 202 and implemented in
+Python 2.0, which was released in 2000. In Python, odd squares less than 10,000
+can be expressed in the following way:
+
+    [n*n for n in range(1, 101) if (n*n)%2 == 1]
+
+This brings us to array comprehensions in ECMAScript Harmony. Unfortunately,
+ECMAScript has neither a `range` function nor a convenient array shorthand for
+ranges (as Haskell and Miranda do). Instead, we will initialize a list of
+numbers from 1 to 100 using an immediately-invoked function expression (IIFE).
+That makes our expression for odd squares less than 10,000 look like this:
+
+    var xs = (function () {
+      var rs = [], i = 1;
+      for (; i <= 100; i++) { rs.push(i); }
+      return rs;
+    })();
+    [n*n for (n of xs) if (n*n % 2 == 1)]
+
+Note the similarity between the ECMAScript and Python syntax. If ECMAScript had
+a range function or array shorthand, the code would be just as concise as the
+equivalent Python or Haskell. 
