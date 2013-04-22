@@ -87,3 +87,33 @@ That makes our expression for odd squares less than 10,000 look like this:
 Note the similarity between the ECMAScript and Python syntax. If ECMAScript had
 a range function or array shorthand, the code would be just as concise as the
 equivalent Python or Haskell. 
+
+## Standards Progress
+
+## Implementation Status
+
+Array comprehensions are a relatively new ECMAScript language feature, and
+as such they are not completley supported on all current ECMAScript
+implementations. Presently Mozilla's Firefox supports array comprehensions
+in its SpiderMonkey ECMAScript parsing and execution engine.
+
+Other investigated ECMAScript engines (V8, Carakan, Chakra, and
+JavaScriptCore) did not appear to have any support for array comprehensions.
+
+Despite the current lack of support, there have been discussions for all of the
+aforementioned open source ECMAScript engines to support array comprehensions.
+However, as Harmony is not yet an official standard, support for its language
+features is not hightly prioritized among ECMAScript development communities.
+Specificaly, the V8 development community has stated that additional features
+will not be coming to the V8 engine until they are officially accepted in the
+final version of the ECMAScript specification. Consequently, V8 will very likely
+not support array comprehensions until the Harmony specification is finalized
+and standardized. Unfortunately, the rest of the aforementioned ECMAScript engines
+do not appear to have as open of a development community as does Mozilla and
+Google. Consequently, information regarding their future support for array
+comprehensions is not known.
+
+## Sources
+- https://code.google.com/p/v8/issues/detail?id=890
+- http://stackoverflow.com/questions/14511954/array-comprehensions-in-nodejs
+- https://developer.mozilla.org/en-US/docs/JavaScript/New_in_JavaScript/1.7
