@@ -18,6 +18,7 @@ We will be discussing list comprehensions and array comprehensions in general, a
 [V8 Project](https://code.google.com/p/v8/)
 [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/JavaScript)
 [Mozilla Harmony Tracking](https://bugzilla.mozilla.org/show_bug.cgi?id=694100)
+[Opera Developer Community](http://dev.opera.com/articles/view/javascript-array-extras-in-detail/)
 
 ### Code Examples
 The following examples can run in recent versions of Firefox.
