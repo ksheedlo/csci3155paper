@@ -1,7 +1,7 @@
 PANDOC=pandoc
 
-outline.pdf: outline.md
+.PHONY: all
+all: outline paper
 
-paper.pdf: paper.md
-
-
+%: %.md
+	pandoc -o $@.pdf $^
