@@ -90,6 +90,33 @@ equivalent Python or Haskell.
 
 ## Standards Progress
 
+In a working draft for the 6th edition of the EMCAScript includes syntax for
+array comprehension.
+
+    ArrayComprehension:
+        [Comprehension]
+    Comprehension:
+        ComprehensionQualification AssignmentExpression
+    ComprehensionQualification:
+        ComprehensionFor ComprehensionQualifierList
+    ComprehensionQualifierList:
+        ComprehensionQualifier
+        ComprehensionQualifierList ComprehensionQualifier
+    ComprehensionQualifier:
+        ComprehensionFor
+        ComprehensionIf
+    ComprehensionFor:
+        for (ForBinding of AssignmentExpression)
+    ComprehensionIf:
+        if (AssignmentExpression)
+    ForBinding:
+        BindingIdentifier
+        BindingPattern
+
+Earlier drafts introduced the syntax for array comprehension and through later revisions
+they've expanded on the semantics of comprehension. Comprehension for changed into abstract
+syntax. 
+
 ## Implementation Status
 
 Array comprehensions are a relatively new ECMAScript language feature, and
