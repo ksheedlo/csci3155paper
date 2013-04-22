@@ -113,6 +113,8 @@ do not appear to have as open of a development community as does Mozilla and
 Google. Consequently, information regarding their future support for array
 comprehensions is not known.
 
+## Implications and future predictions
+
 ## Sources
 - https://code.google.com/p/v8/issues/detail?id=890
 - http://stackoverflow.com/questions/14511954/array-comprehensions-in-nodejs
