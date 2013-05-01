@@ -156,6 +156,15 @@ do not appear to have as open of a development community as does Mozilla and
 Google. Consequently, information regarding their future support for array
 comprehensions is not known.
 
+## Community Impact
+
+To the extent that the JavaScript community is familiar with list
+comprehensions, array comprehesions appear to be an in-demand feature. Multiple
+StackOverflow threads ask for list comprehensions or a way to emulate them in
+JavaScript. We also found a number of blog articles promoting the topic. Some in
+the community have raised concerns about readability and compatibility, but the
+community appears to be largely for implementing this feature.
+
 ## Implications and Future Predictions
 
 For client-side ECMAScript, array comprehensions are not quite ready for
@@ -176,3 +185,5 @@ be overloaded to emulate array comprehensions.
 - https://code.google.com/p/v8/issues/detail?id=890
 - http://stackoverflow.com/questions/14511954/array-comprehensions-in-nodejs
 - https://developer.mozilla.org/en-US/docs/JavaScript/New_in_JavaScript/1.7
+- http://stackoverflow.com/questions/11479418/array-comprehension-in-javascript
+- http://stackoverflow.com/questions/4964456/make-javascript-do-list-comprehension
