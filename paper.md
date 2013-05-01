@@ -90,8 +90,8 @@ equivalent Python or Haskell.
 
 ## Standards Progress
 
-In a working draft for the 6th edition of the EMCAScript includes syntax for
-array comprehension.
+The current working draft for ECMAScript Harmony includes a well-defined grammar
+for array comprehensions.
 
     ArrayComprehension:
         [Comprehension]
@@ -113,9 +113,25 @@ array comprehension.
         BindingIdentifier
         BindingPattern
 
-Earlier drafts introduced the syntax for array comprehension and through later revisions
-they've expanded on the semantics of comprehension. Comprehension for changed into abstract
-syntax. 
+Since the early working drafts of the spec, the concrete syntax for array
+comprehensions has seen little to no change. However, the abstract syntax has
+been significantly rewritten to make `ComprehensionFor` more flexible and to
+accomodate additional qualifiers. An early draft of the abstract syntax is shown
+below:
+
+    ArrayComprehension:
+        [Expression ComprehensionForList]
+        [Expression ComprehensionForList if (Expression)]
+    ComprehensionForList: 
+        ComprehensionFor
+        ComprehensionForList ComprehensionFor 
+    ComprehensionFor:
+        for (LeftHandSideExpression of Expression)
+
+Notice the changes between the early draft and the current working draft.
+`ComprehensionIf` was defined and abstracted into `ComprehensionQualifier` along
+with `ComprehensionFor`, `ForBinding` was defined, and other fixes were applied
+to make the syntax more robust.
 
 ## Implementation Status
 
