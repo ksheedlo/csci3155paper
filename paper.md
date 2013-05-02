@@ -188,3 +188,4 @@ be overloaded to emulate array comprehensions.
 - https://developer.mozilla.org/en-US/docs/JavaScript/New_in_JavaScript/1.7
 - http://stackoverflow.com/questions/11479418/array-comprehension-in-javascript
 - http://stackoverflow.com/questions/4964456/make-javascript-do-list-comprehension
+- http://wiki.ecmascript.org/doku.php?id=harmony:array_comprehensions
