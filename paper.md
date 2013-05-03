@@ -1,14 +1,15 @@
 # Array Comprehensions in ECMAScript Harmony
-## CSCI 3155 - Princples of Programming Languages
+## CSCI 3155 - Principles of Programming Languages
 ## Spring 2013
 ### James Pfaff, Ken Sheedlo, Jack Skinner
 
 **Abstract.** Array comprehensions are currently being standardized in
-ECMAScript 6 (Harmony) and implemented in current Javascript engines. This is a
+ECMAScript 6 (Harmony) and implemented in current JavaScript engines. This is a
 powerful new feature that should lead to increased code clarity and more fluid
 implementation of algorithms. We will examine the history, standardization and
-implementation of array comprehensions in Harmony and comment on the
-implications of this new feature for the web.
+implementation of array comprehensions in Harmony. We will investigate the
+reaction in the JavaScript community and comment on the implications of this new
+feature for the web.
 
 ## Motivation
 
@@ -117,7 +118,7 @@ for array comprehensions.
 Since the early working drafts of the spec, the concrete syntax for array
 comprehensions has seen little to no change. However, the abstract syntax has
 been significantly rewritten to make `ComprehensionFor` more flexible and to
-accomodate additional qualifiers. An early draft of the abstract syntax is shown
+accommodate additional qualifiers. An early draft of the abstract syntax is shown
 below:
 
     ArrayComprehension:
@@ -131,36 +132,36 @@ below:
 
 Notice the changes between the early draft and the current working draft.
 `ComprehensionIf` was defined and abstracted into `ComprehensionQualifier` along
-with `ComprehensionFor`, `ForBinding` was defined, and other fixes were applied
-to make the syntax more robust.
+with `ComprehensionFor`. Additionally, `ForBinding` was defined, and other fixes
+were applied to make the syntax more robust and flexible.
 
 ## Implementation Status
 
 Array comprehensions are a relatively new ECMAScript language feature, and
-as such they are not completley supported on all current ECMAScript
+as such they are not completely supported on all current ECMAScript
 implementations. Presently Mozilla's Firefox supports array comprehensions
-in its SpiderMonkey ECMAScript parsing and execution engine.
+in its SpiderMonkey JavaScript parsing and execution engine.
 
-Other investigated ECMAScript engines (V8, Carakan, Chakra, and
+Other investigated ECMAScript implementations (V8, Carakan, Chakra, and
 JavaScriptCore) did not appear to have any support for array comprehensions.
 
 Despite the current lack of support, there have been discussions for all of the
 aforementioned open source ECMAScript engines to support array comprehensions.
-However, as Harmony is not yet an official standard, support for its language
-features is not hightly prioritized among ECMAScript development communities.
-Specificaly, the V8 development community has stated that additional features
-will not be coming to the V8 engine until they are officially accepted in the
-final version of the ECMAScript specification. Consequently, V8 will very likely
-not support array comprehensions until the Harmony specification is finalized
-and standardized. Unfortunately, the rest of the aforementioned ECMAScript engines
-do not appear to have as open of a development community as does Mozilla and
-Google. Consequently, information regarding their future support for array
-comprehensions is not known.
+However, as Harmony is not yet an official standard, support for Harmony
+language features is not highly prioritized among ECMAScript development
+communities.  Specifically, the V8 development community has stated that
+additional features will not be coming to the V8 engine until they are
+officially accepted in the final version of the ECMAScript specification.
+Consequently, V8 will very likely not support array comprehensions until the
+Harmony specification is finalized and standardized. Unfortunately, the rest of
+the aforementioned ECMAScript engines do not have development communities as
+open as those of Mozilla and Google. Information regarding their future support
+for array comprehensions is not known.
 
 ## Community Impact
 
 To the extent that the JavaScript community is familiar with list
-comprehensions, array comprehesions appear to be an in-demand feature. Multiple
+comprehensions, array comprehensions appear to be an in-demand feature. Multiple
 StackOverflow threads ask for list comprehensions or a way to emulate them in
 JavaScript. We also found a number of blog articles promoting the topic. Some in
 the community have raised concerns about readability and compatibility, but the
@@ -168,19 +169,23 @@ community appears to be largely for implementing this feature.
 
 ## Implications and Future Predictions
 
-For client-side ECMAScript, array comprehensions are not quite ready for
-production use. This is due to the fact that it is hardly supported in any
-of the available main-stream web browsers. Furtheremore, as V8 does not
-currently implement array comprehensions, it is not feasibly usable in
-server-side production code.
+For client-side ECMAScript, array comprehension syntax is not quite ready for
+production use. This is due to the fact that it is not supported in most
+mainstream web browsers, with the exception of Firefox. Furthermore, as V8
+does not currently implement array comprehensions, it is not feasibly usable in
+server-side production code, for instance in Node.js. We expect that due to
+rapid iteration on the part of browser developers in recent years, application
+code will be able to use array comprehensions within two to three years. This
+will add value by cleaning up the syntax and decreasing the rate of errors in
+application code.
 
-That said, a developer with the desire to use a higher-order operation such
-as array comprehension could feasibly use a higher-level ECMAScript framework
-to accomplish its functionality, as the higher-level framework could take care
+That said, a developer with the desire to use a higher-order operation such as
+array comprehensions could feasibly use a higher-level ECMAScript framework to
+accomplish that functionality today. The higher-level framework could take care
 of instances where the specific language feature is not yet available in the
-browser that the code is being executed in. This could also be accomplished
-through the use of a shim, or some ECMAScript-conforming syntax that could
-be overloaded to emulate array comprehensions.
+browser where the code is being executed. A shim could feasibly implement
+similar behavior, but the ECMAScript implementation would most likely have to
+be modified to support array comprehension syntax.
 
 ## Sources
 - https://code.google.com/p/v8/issues/detail?id=890
